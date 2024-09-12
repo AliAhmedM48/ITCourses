@@ -1,0 +1,73 @@
+﻿@*@model IEnumerable<Day4_MVC_lab7___sol___Ali_Ahmed.Models.Course>*@
+
+@{
+    ViewBag.Title = "MyCourses";
+    Layout = "~/Views/Shared/_Constcontent.cshtml";
+}
+
+
+
+<div>
+    <div class="container">
+        <h2>My Courses</h2>
+    </div>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+
+
+                <th scope="col">#</th>
+                <th scope="col">Course Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Department</th>
+                <th scope="col">Delete</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+
+            @{int i = 0;
+                foreach (var item in Model)
+                {
+                    if (Convert.ToString((string)Session["loginFORemail"]) == item.Email)
+                    {
+                        foreach (var MyCoursesNames in item.Courses)
+                        {
+                            i++;
+
+                            <tr>
+
+                                <th scope="row">@i</th>
+                                <td>@MyCoursesNames.Name</td>
+                                <td>@MyCoursesNames.Price</td>
+                                <td>@MyCoursesNames.Department_ID</td>
+                                <td><a href="~/Courses/Delete/@MyCoursesNames.ID">Delete</a></td>
+                            </tr>
+                        }
+
+                    }
+                    @*else
+                    {
+                        if (Convert.ToString((string)Session["loginFORemail"]) == item.Email)
+                        {
+                            <h1> No Courses added. <a href = "~/departments/index" > Brows Our Courses Now! </a ></h1 >
+                        }
+                    }*@
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="top-menu center-block">
+    <ul class="nav pull-right top-menu">
+        <li><a class="logout" href="~/Courses/DeleteAll">Delete all courses</a></li>
+
+    </ul>
+</div>
+
+
+
+
+

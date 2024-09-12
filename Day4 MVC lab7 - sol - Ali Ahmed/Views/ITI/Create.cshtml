@@ -1,0 +1,188 @@
+﻿@{
+    Layout = null;
+}
+
+<!-- #region OLD FORM -->
+@*
+
+    @{
+        ViewBag.Title = "Create";
+        Layout = "~/Views/Shared/_Constcontent.cshtml";
+    }
+
+        <div class="container-fluid">
+            <form method="post" action="~/ITI/Create" style="text-align:center;">
+
+
+                <div class="form-group">
+                    <label for="ID">ID</label>
+                    <input type="number" class="form-control" name="id" id="ID" />
+                </div>
+
+                <div class="form-group">
+                    <label for="Name">Name</label>
+                    <input type="text" class="form-control" name="name" id="Name" />
+                </div>
+
+                <div class="form-group">
+                    <label for="Phone">Phone</label>
+                    <input type="number" class="form-control" name="phone" id="Phone" />
+                </div>
+
+                <div class="form-group">
+                    <label for="University">University</label>
+                    <input type="text" class="form-control" name="university" id="University" />
+                </div>
+
+
+                <div class="form-group">
+                    <label for="College">College</label>
+                    <input type="text" class="form-control" name="college" id="College" />
+                </div>
+
+                <div class="form-group">
+                    <label for="Graduationyear">Graduation year</label>
+                    <input type="number" class="form-control" name="graduationyear" id="Graduationyear" />
+                </div>
+
+                <div class="form-group">
+                    <label for="Gender">Gender</label>
+                    <input type="text" class="form-control" name="gender" id="Gender" />
+                </div>
+
+                <input type="submit" class="btn btn-primary" value="Create" />
+
+            </form>
+
+
+
+
+        </div>*@
+
+
+
+<!-- #endregion -->
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Constcontent</title>
+    <link href="~/Content/StyleTest.css" rel="stylesheet" />
+    @*<link href="~/Content/bootstrap.css" rel="stylesheet" />*@
+</head>
+<body>
+
+
+    <form method="post" action="~/ITI/Create" id="login-form" class="login-form" autocomplete="off" role="main">
+        @*-----------------------START-----------------------------*@
+        @*<h1 class="a11y-hidden">Login Form</h1>*@
+        @*-----------------------Account Data-------------------------------*@
+        <!-- #region Account Data -->
+
+        <div>
+            <label>
+                <span style="font-weight:bold;font-size:large;">Account Data</span>
+            </label>
+        </div>
+
+        <!-- #endregion -->
+        <!-- #region Email Box -->
+        <div>
+            <label class="label-email">
+                <input type="email" class="text" name="email" placeholder="Email" tabindex="2" required />
+                <span class="required">Email</span>
+            </label>
+        </div>
+        <!-- #endregion -->
+        <!-- #region Passowrd Box -->
+        <div>
+            <label class="label-password">
+                <input type="text" class="text" name="password" placeholder="Password" tabindex="3" required />
+                <span class="required">Password</span>
+            </label>
+        </div>
+        <!-- #endregion -->
+        <!-- #region Show password -->
+        <!--<input type="checkbox" name="show-password" class="show-password a11y-hidden" id="show-password" tabindex="3" />
+    <label class="label-show-password" for="show-password">
+        <span>Show Password</span>
+    </label>-->
+        <!-- #endregion -->
+        <!-- #region Forget Password -->
+        <!--<div class="email">
+            <a href="#">Forgot password?</a>
+        </div>-->
+        <!-- #endregion -->
+        @*------------------------Personal Data-----------------------------*@
+        <!-- #region Personal Data -->
+
+
+        <div>
+            <label>
+                <span style="font-weight:bold;font-size:large;">Personal Data</span>
+            </label>
+        </div>
+
+        <!-- #endregion -->
+        <!-- #region Name Box -->
+        <div>
+            <label class="label-name">
+                <input type="text" class="text" name="name" placeholder="Name" tabindex="1" required />
+                <span class="required">Full Name</span>
+            </label>
+        </div>
+        <!-- #endregion -->
+        <!-- #region Phone Box -->
+        <div>
+            <label class="label-phone">
+                <input type="number" class="text" name="phone" placeholder="Phone" tabindex="2" required />
+                <span class="required">Phone</span>
+            </label>
+        </div>
+        <!-- #endregion -->
+        @*مش عارف أظبطه*@
+        <!-- #region Gender Box -->
+        <!--<div>
+        <label class="label-gender">
+            <input type="radio" class="text" name="gender"  tabindex="2" value="Male" required />
+            <input type="radio" class="text" name="gender"  tabindex="2" value="Female" required />
+            <span class="required">Gender</span>
+        </label>
+    </div>-->
+        <!-- #endregion -->
+        @*-----------------------Buttons-----------------------------*@
+        <!-- #region Create Button -->
+        <input type="submit" value="Sign up" />
+        <!-- #endregion -->
+        <!-- #region Login Button -->
+        <!--<input type="submit" value="Log In" />-->
+        <!-- #endregion -->
+        <!-- #region Don't have account Button -->
+        <!--<input type="submit" value="Don't have an account?" />-->
+        <!-- #endregion -->
+        <!-- #region Have account Button -->
+        <input type="submit" value="Have an account?" />
+        <!-- #endregion -->
+        @*-----------------------Animated Figure-----------------------------*@
+        <!-- #region Animated Figure -->
+        <figure aria-hidden="true">
+            <div class="person-body"></div>
+            <div class="neck skin"></div>
+            <div class="head skin">
+                <div class="eyes"></div>
+                <div class="mouth"></div>
+            </div>
+            <div class="hair"></div>
+            <div class="ears"></div>
+            <div class="shirt-1"></div>
+            <div class="shirt-2"></div>
+        </figure>
+        <!-- #endregion -->
+        @*-----------------------End-----------------------------*@
+
+    </form>
+</body>
+</html>

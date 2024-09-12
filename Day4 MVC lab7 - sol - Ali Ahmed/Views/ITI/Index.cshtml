@@ -1,0 +1,98 @@
+﻿@*@model Day4_MVC_lab7___sol___Ali_Ahmed.Models.Student*@
+@model IEnumerable<Day4_MVC_lab7___sol___Ali_Ahmed.Models.Student>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Constcontent.cshtml";
+}
+
+
+
+<div>
+    <div class="container">
+        <h2>Users Data</h2>
+    </div>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+
+                <th scope="col">Date</th>
+                <th scope="col">Control The Roles</th>
+                <th scope="col">#</th>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Email</th>
+                <th scope="col">Password</th>
+                <th scope="col">Role</th>
+                <th scope="col">Courses</th>
+                <th scope="col">Picture</th>
+                <th scope="col">Modify</th>
+                <th scope="col">Delete</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @{ int i = 0; }
+            @*ViewBag.StudentsBag*@
+            @*ViewBag.StudentsData*@
+            @{
+                foreach (var item in Model)
+                {
+                    i++;
+                        <tr>
+                            <td>@DateTime.Today</td>
+
+                            <th><a class="logout" href="~/ITI/MakeAdminOrRemove/@item.ID">Make/Remove admin</a></th>
+                            <th scope="row">@i</th>
+                            <th scope="row">@item.ID</th>
+                            <td>@item.Name</td>
+                            <td>@item.Phone</td>
+                            <td>@item.Email</td>
+                            <td>@item.Password</td>
+                            <td>@item.Role</td>
+                            <td>
+                                @{foreach (var itemC in item.Courses)
+                                    {
+                                        <span>@itemC.Name </span><span>-</span>
+                                    }
+                                }
+                            </td>
+                            <td>
+
+                                @{
+                                    if (item.ProfilePhoto != null &&item.ProfilePhoto != "")
+                                    {
+                                        <img src="~/Img/profilepictures/@Url.Content(item.ProfilePhoto)" class="rounded-circle" width="50">
+                                    }
+                                    else
+                                    {
+                                        <img src="~/Content/img/img_avatar.png" class="rounded-circle" width="50">
+                                    }
+                                }
+
+
+
+                            </td>
+
+                            <td><a href="~/ITI/Edit/@item.ID">Modify</a></td>
+                            <td><a href="~/ITI/Delete/@item.ID">Delete</a></td>
+                        </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+
+<div class="top-menu center-block">
+    <ul class="nav pull-right top-menu">
+
+        <li><a class="logout" href="~/ITI/Register">Create an account</a></li>
+        <li><a class="logout" href="~/ITI/DeleteAll">Delete all accounts</a></li>
+    </ul>
+</div>
+
+
+
+

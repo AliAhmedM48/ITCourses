@@ -1,0 +1,190 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Constcontent.cshtml";
+}
+
+
+
+<!-- #region onlineedu -->
+
+
+<main>
+
+    <!--? Categories Area Start -->
+    <div class="categories-area section-padding30">
+        <div class="container">
+            <!-- #region Section Tittle -->
+
+
+
+            <div class="row justify-content-sm-center">
+                <div class="cl-xl-7 col-lg-8 col-md-10">
+                    <!-- Section Tittle -->
+                    <div class="section-tittle text-center mb-70">
+                        <span><!--PUT YOUR CODE--></span>
+                        <h2>Let's Brows All Our Departments</h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- #endregion -->
+
+            <!-- #region Department Cards -->
+           
+           
+            <div class="row">
+                @{
+                    foreach (var item in ViewBag.DepartmentsBag)
+                    {
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-cat mb-50">
+                                @*<div class="cat-icon">
+                            <span class="flaticon-web-design"></span>
+                        </div>*@
+                                <div class="cat-cap">
+                                    <h5><a href="#">@item.Name</a></h5>
+                                    <p>@item.departDescription</p>
+                                    <a href="#" class="read-more1">Read More ></a>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="" />
+                        <img src="" />
+                        <img src="" />
+                        <img src="" />
+                    }
+                }
+
+
+                <!-- #endregion -->
+                @*
+
+            <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="single-cat mb-50">
+                <div class="cat-icon">
+                    <span class="flaticon-web-design"></span>
+                </div>
+                <div class="cat-cap">
+                    <h5><a href="#">App Development</a></h5>
+                    <p>Sorem hpsum folor sixdsft amhtget, consectetur adipiscing eliht, sed do eiusmod tempor incidi.</p>
+                    <a href="#" class="read-more1">Read More ></a>
+                </div>
+            </div>
+        </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="single-cat mb-50">
+                <div class="cat-icon">
+                    <span class="flaticon-education"></span>
+                </div>
+                <div class="cat-cap">
+                    <h5><a href="#">App Development</a></h5>
+                    <p>Sorem hpsum folor sixdsft amhtget, consectetur adipiscing eliht, sed do eiusmod tempor incidi.</p>
+                    <a href="#" class="read-more1">Read More ></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="single-cat mb-50">
+                <div class="cat-icon">
+                    <span class="flaticon-communications"></span>
+                </div>
+                <div class="cat-cap">
+                    <h5><a href="#">Video Editing</a></h5>
+                    <p>Sorem hpsum folor sixdsft amhtget, consectetur adipiscing eliht, sed do eiusmod tempor incidi.</p>
+                    <a href="#" class="read-more1">Read More ></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="single-cat mb-50">
+                <div class="cat-icon">
+                    <span class="flaticon-computing"></span>
+                </div>
+                <div class="cat-cap">
+                    <h5><a href="#">Digital Marketing</a></h5>
+                    <p>Sorem hpsum folor sixdsft amhtget, consectetur adipiscing eliht, sed do eiusmod tempor incidi.</p>
+                    <a href="#" class="read-more1">Read More ></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="single-cat mb-50">
+                <div class="cat-icon">
+                    <span class="flaticon-tools-and-utensils"></span>
+                </div>
+                <div class="cat-cap">
+                    <h5><a href="#">Seo Marketing</a></h5>
+                    <p>Sorem hpsum folor sixdsft amhtget, consectetur adipiscing eliht, sed do eiusmod tempor incidi.</p>
+                    <a href="#" class="read-more1">Read More ></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="single-cat mb-50">
+                <div class="cat-icon">
+                    <span class="flaticon-business"></span>
+                </div>
+                <div class="cat-cap">
+                    <h5><a href="#">Content Writing</a></h5>
+                    <p>Sorem hpsum folor sixdsft amhtget, consectetur adipiscing eliht, sed do eiusmod tempor incidi.</p>
+                    <a href="#" class="read-more1">Read More ></a>
+                </div>
+            </div>
+        </div>*@
+            </div>
+            <!-- #region Find More Courses -->
+            <!-- Section Button -->
+            @*<div class="row">
+                <div class="col-lg-12">
+                    <div class="browse-btn2 text-center mt-50">
+                        <a href="courses.html" class="btn">Find More Courses</a>
+                    </div>
+                </div>
+            </div>*@
+
+            <!-- #endregion -->
+        </div>
+    </div>
+    <!-- Categories Area End -->
+
+
+
+
+
+</main>
+
+<!-- JS here -->
+<script src="~/Scripts/onlineeduScripts/vendor/modernizr-3.5.0.min.js"></script>
+<!-- Jquery, Popper, Bootstrap -->
+<script src="~/Scripts/onlineeduScripts/vendor/jquery-1.12.4.min.js"></script>
+<script src="~/Scripts/onlineeduScripts/popper.min.js"></script>
+<script src="~/Scripts/onlineeduScripts/bootstrap.min.js"></script>
+<!-- Jquery Mobile Menu -->
+<script src="~/Scripts/onlineeduScripts/jquery.slicknav.min.js"></script>
+<!-- Jquery Slick , Owl-Carousel Plugins -->
+<script src="~/Scripts/onlineeduScripts/owl.carousel.min.js"></script>
+<script src="~/Scripts/onlineeduScripts/slick.min.js"></script>
+<!-- One Page, Animated-HeadLin -->
+<script src="~/Scripts/onlineeduScripts/wow.min.js"></script>
+<script src="~/Scripts/onlineeduScripts/animated.headline.js"></script>
+<script src="~/Scripts/onlineeduScripts/jquery.magnific-popup.js"></script>
+<!-- Date Picker -->
+<script src="~/Scripts/onlineeduScripts/gijgo.min.js"></script>
+<!-- Nice-select, sticky -->
+<script src="~/Scripts/onlineeduScripts/jquery.nice-select.min.js"></script>
+<script src="~/Scripts/onlineeduScripts/jquery.sticky.js"></script>
+<!-- counter , waypoint -->
+<script src="~/Scripts/onlineeduScripts/jquery.counterup.min.js"></script>
+<script src="~/Scripts/onlineeduScripts/waypoints.min.js"></script>
+<!-- contact js -->
+<script src="~/Scripts/onlineeduScripts/contact.js"></script>
+<script src="~/Scripts/onlineeduScripts/jquery.form.js"></script>
+<script src="~/Scripts/onlineeduScripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/onlineeduScripts/mail-script.js"></script>
+<script src="~/Scripts/onlineeduScripts/jquery.ajaxchimp.min.js"></script>
+<!-- Jquery Plugins, main Jquery -->
+<script src="~/Scripts/onlineeduScripts/plugins.js"></script>
+<script src="~/Scripts/onlineeduScripts/main.js"></script>
+<!-- #endregion -->

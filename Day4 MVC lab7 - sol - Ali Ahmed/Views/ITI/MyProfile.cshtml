@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Day4_MVC_lab7___sol___Ali_Ahmed.Models.Student>
+@{
+    ViewBag.Title = "MyProfile";
+    Layout = "~/Views/Shared/_Constcontent.cshtml";
+}
+
+<h2>MyProfile</h2>
+<hr />
+<h4>Change prpfile picture</h4>
+<form method="post" action="~/ITI/UploadProfPic/@Session["loginFOReid"]" enctype="multipart/form-data">
+    <input type="file" name="upload" />
+    <input type="submit" name="signin" id="signin" class="form-submit" value="upload" />
+</form>
+
+
+
+@*@{
+    if (Convert.ToString((string)Session["loginFORpic"]) != null && Convert.ToString((string)Session["loginFORpic"]) != "")
+    {
+        <img src="~/Img/profilepictures/@Url.Content((string)Session["loginFORpic"])" class="rounded-circle" width="100">
+    }
+    else
+    {
+        <img src="~/Content/img/img_avatar.png" class="rounded-circle" width="100">
+    }
+}*@

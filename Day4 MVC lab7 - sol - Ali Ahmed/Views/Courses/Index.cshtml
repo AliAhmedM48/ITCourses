@@ -1,0 +1,127 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Constcontent.cshtml";
+}
+
+
+
+<!-- #region onlineedu -->
+
+
+
+<h3><i class="fa fa-angle-right"></i> Discover Our Courses</h3>
+<div class="row mt">
+    <div class="col-lg-12">
+
+
+        <!--? Categories Area Start -->
+        <div class="categories-area section-padding30">
+            <div class="container">
+                <!-- #region Section Tittle -->
+
+
+
+                <div class="row justify-content-sm-center">
+                    <div class="cl-xl-7 col-lg-8 col-md-10">
+                        <!-- Section Tittle -->
+                        <div class="section-tittle text-center mb-70">
+                            <span><!--PUT YOUR CODE--></span>
+                            @*<h2>Let's Brows All Our Departments</h2>*@
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- #endregion -->
+                <!-- #region Department Cards -->
+
+
+                <div class="row">
+                    @{
+                        foreach (var item in ViewBag.CoursesBag)
+                        {
+
+                            <div class="col-lg-4 col-md-4 col-sm-4 mb">
+                                <div class="product-panel-2 pn">
+                                    @{
+                                        if (item.PhotoCourse != null && item.PhotoCourse != "")
+                                        {
+                                            <img src="@Url.Content(item.PhotoCourse)" width="100" alt="">
+                                        }
+                                        else
+                                        {
+                                            <img src="~/Img/NoImageAvailable.jpg" width="200" alt="">
+                                        }
+                                    }
+                                    <h5 class="mt">@item.Name</h5>
+                                    <h6>TOTAL SALES: @item.Price</h6>
+
+                                    <a href="~/Courses/ApplyCourse/@item.ID">   <button class="btn btn-small btn-theme04">Enroll Now!</button></a>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+
+
+               
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+
+
+
+
+<!-- js placed at the end of the document so the pages load faster -->
+@*<script src="~/Scripts/DashioScripts/lib/jquery/jquery.min.js"></script>*@
+<script src="~/Scripts/DashioScripts/lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="~/Scripts/DashioScripts/lib/jquery.dcjqaccordion.2.7.js"></script>
+<script src="~/Scripts/DashioScripts/lib/jquery.scrollTo.min.js"></script>
+<script src="~/Scripts/DashioScripts/lib/jquery.nicescroll.js"></script>
+<script src="~/Scripts/DashioScripts/lib/jquery.sparkline.js"></script>
+<!--common script for all pages-->
+
+<script src="~/Scripts/DashioScripts/lib/common-scripts.js"></script>
+<!--script for this page-->
+<script src="~/Scripts/DashioScripts/lib/sparkline-chart.js"></script>
+
+
+<!-- JS here -->
+<script src="~/Scripts/onlineeduScripts/vendor/modernizr-3.5.0.min.js"></script>
+<!-- Jquery, Popper, Bootstrap -->
+<script src="~/Scripts/onlineeduScripts/vendor/jquery-1.12.4.min.js"></script>
+<script src="~/Scripts/onlineeduScripts/popper.min.js"></script>
+<script src="~/Scripts/onlineeduScripts/bootstrap.min.js"></script>
+<!-- Jquery Mobile Menu -->
+<script src="~/Scripts/onlineeduScripts/jquery.slicknav.min.js"></script>
+<!-- Jquery Slick , Owl-Carousel Plugins -->
+<script src="~/Scripts/onlineeduScripts/owl.carousel.min.js"></script>
+<script src="~/Scripts/onlineeduScripts/slick.min.js"></script>
+<!-- One Page, Animated-HeadLin -->
+<script src="~/Scripts/onlineeduScripts/wow.min.js"></script>
+<script src="~/Scripts/onlineeduScripts/animated.headline.js"></script>
+<script src="~/Scripts/onlineeduScripts/jquery.magnific-popup.js"></script>
+<!-- Date Picker -->
+<script src="~/Scripts/onlineeduScripts/gijgo.min.js"></script>
+<!-- Nice-select, sticky -->
+<script src="~/Scripts/onlineeduScripts/jquery.nice-select.min.js"></script>
+<script src="~/Scripts/onlineeduScripts/jquery.sticky.js"></script>
+<!-- counter , waypoint -->
+<script src="~/Scripts/onlineeduScripts/jquery.counterup.min.js"></script>
+<script src="~/Scripts/onlineeduScripts/waypoints.min.js"></script>
+<!-- contact js -->
+<script src="~/Scripts/onlineeduScripts/contact.js"></script>
+<script src="~/Scripts/onlineeduScripts/jquery.form.js"></script>
+<script src="~/Scripts/onlineeduScripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/onlineeduScripts/mail-script.js"></script>
+<script src="~/Scripts/onlineeduScripts/jquery.ajaxchimp.min.js"></script>
+<!-- Jquery Plugins, main Jquery -->
+<script src="~/Scripts/onlineeduScripts/plugins.js"></script>
+<script src="~/Scripts/onlineeduScripts/main.js"></script>
+<!-- #endregion -->

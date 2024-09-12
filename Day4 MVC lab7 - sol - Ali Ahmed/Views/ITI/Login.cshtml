@@ -1,0 +1,107 @@
+﻿@{
+    Layout = null;
+}
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Font Icon -->
+    <link href="~/colorlib-regform-7/fonts/material-icon/css/material-design-iconic-font.min.css" rel="stylesheet" />
+    <!-- Main css -->
+    <link href="~/colorlib-regform-7/css/style.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <!-- Sing in  Form -->
+    <section class="sign-in">
+        <div class="container">
+            <div class="signin-content">
+                <div class="signin-image">
+                    <figure><img src="~/colorlib-regform-7/images/signin-image.jpg" alt="sing up image"></figure>
+
+
+                    <a href="~/ITI/Register" class="signup-image-link">Create an account</a>
+                </div>
+                <div class="signin-form">
+
+                    <h2 class="form-title">Sign in</h2>
+
+                    <form method="POST" class="register-form" id="login-form" action="~/ITI/Login" autocomplete="off" @*role="main"*@>
+
+                        <!-- #region Email Box -->
+
+                        <div class="form-group">
+                            <label for="email"><i class="zmdi zmdi-email"></i></label>
+                            <input type="text" name="email" id="email" placeholder="Your Email" tabindex="1" required />
+                        </div>
+                        <!-- #endregion -->
+                        <!-- #region Passowrd Box -->
+                        <div class="form-group">
+                            <label for="your_passwaord"><i class="zmdi zmdi-lock"></i></label>
+                            <input type="password" name="password" id="your_passwaord" placeholder="Password" tabindex="2" required />
+                        </div>
+                        <!-- #endregion -->
+                        <!-- #region Remember Me -->
+                        @*<div class="form-group">
+            <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
+            <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
+        </div>*@
+
+                        <!-- #endregion -->
+                        <!-- #region Sign IN Button -->
+
+
+                    <div class="form-group form-button">
+                        <input type="submit" name="signin" id="signin" class="form-submit" value="Log in" />
+                        @*<a href="~/ITI/Index" class="signup-image-link">Login as Admin</a>*@
+                        @*<a href="~/ITI/MyProfile" class="signup-image-link">Login as USER</a>*@
+
+                    </div>
+
+                        <!-- #endregion -->
+
+                    </form>
+
+
+
+                    <!-- #region Social Media Login -->
+
+                    @*<div class="social-login">
+                        <span class="social-label">Or login with</span>
+                        <ul class="socials">
+                            <li><a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
+                            <li><a href="#"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li>
+                            <li><a href="#"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
+                        </ul>
+                    </div>*@
+
+                    <!-- #endregion -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- #region JS -->
+
+
+    <script src="~/colorlib-regform-7/vendor/jquery/jquery.min.js"></script>
+    <script src="~/colorlib-regform-7/js/main.js"></script>
+
+
+    <!-- #endregion -->
+
+
+</body>
+</html>

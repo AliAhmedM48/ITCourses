@@ -1,0 +1,2 @@
+﻿1>------ Build started: Project: Day4 MVC lab7 - sol - Ali Ahmed, Configuration: Debug Any CPU ------
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
